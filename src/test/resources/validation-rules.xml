@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+    <!-- include -->
+    <include file="validation-rules-other.xml"/>
+    
+    <!-- CustomValidator -->  
+    <validators>
+	    <validator name="custom" class="com.feiynn.validation.test.CustomValidator" message="自定义的验证器message"/>
+	</validators>
+    
+    <group name="userAdd">
+    	<field name="username">
+            <rule name="required" /> 
+            <rule name="rangelength" value="[6,20]" />
+        </field>
+        <field name="password">
+        	<rule name="required" message="密码不能为空"/> <!-- You can customize message -->
+        </field>
+        <field name="remark">
+        	<rule name="maxlength" value="21" />
+        </field>
+        <field name="age">
+            <rule name="required"/> 
+            <rule name="digits"/>
+            <rule name="range" value="[0,100]" message="年龄最大{1}岁，最小{0}岁"/> <!-- You can use placeholder in the message -->
+        </field>
+        
+        <field name="email">
+            <rule name="email" />
+            <rule name="required"/>
+        </field>
+        <field name="userMobile">
+             <rule name="regex" value="^((13[0-9])|(15[^4,\D])|(18[0,5-9]))\d{8}$"   /> 
+        </field>
+        <field name="salary">
+             <rule name="custom" /> 
+        </field>
+    </group>
+    
+    <!-- You can configure a group or multiple groups -->
+    <group name="test2">
+    	<field name="username">
+            <rule name="required" /> 
+        </field>
+	</group>
+</validation>

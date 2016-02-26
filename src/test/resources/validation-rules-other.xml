@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation>
+    <group name="digitstest">
+        <field name="test1"><rule name="digits" /></field>
+        <field name="test2"><rule name="digits" /></field>
+        <field name="test3"><rule name="digits" /></field>
+        <field name="test4"><rule name="digits" /></field>
+        <field name="test5"><rule name="digits" /></field>
+        <field name="test6"><rule name="digits" /></field>
+    </group>
+    
+    <group name="numbertest">
+        <field name="test1"><rule name="number" /></field>
+        <field name="test2"><rule name="number" /></field>
+        <field name="test3"><rule name="number" /></field>
+        <field name="test4"><rule name="number" /></field>
+        <field name="test5"><rule name="number" /></field>
+        <field name="test6"><rule name="number" /></field>
+    </group>
+    
+    <group name="maxlengthtest">
+        <field name="test1"><rule name="maxlength" value="5" /></field>
+        <field name="test2"><rule name="maxlength" value="5" /></field>
+        <field name="test3"><rule name="maxlength" value="5" /></field>
+        <field name="test4"><rule name="maxlength" value="a" /></field>
+        <field name="test5"><rule name="maxlength" value="-1" /></field>
+        <field name="test6"><rule name="maxlength" value="" /></field>
+    </group>
+    
+    <group name="maxtest">
+        <field name="test1"><rule name="max" value="99" /></field>
+        <field name="test2"><rule name="max" value="99" /></field>
+        <field name="test3"><rule name="max" value="99" /></field>
+        <field name="test4"><rule name="max" value="b" /></field>
+        <field name="test5"><rule name="max" value="b" /></field>
+    </group>
+    <group name="regextest">
+        <field name="test1"><rule name="regex" value="aa" /></field>
+    </group>
+
+</validation>
