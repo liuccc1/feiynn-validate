@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import com.feiynn.validation.exception.ValidateException;
 
 /** 
- * 
+ * Utils
  * @author: Dean
  */
 public class ValidateUtils {
