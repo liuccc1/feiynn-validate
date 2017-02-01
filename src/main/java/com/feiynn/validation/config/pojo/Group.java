@@ -4,7 +4,7 @@ import java.util.List;
 
 /** 
  * 
- * @author: Dean
+ * @author Dean
  */
 public class Group {
 	private String name;

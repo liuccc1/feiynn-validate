@@ -5,7 +5,7 @@
     
     <!-- CustomValidator -->  
     <validators>
-	    <validator name="custom" class="com.feiynn.validation.test.CustomValidator" message="自定义的验证器message"/>
+	    <validator name="custom" class="com.feiynn.validation.test.vaidators.CustomValidator" message="自定义的验证器默认message"/>
 	</validators>
     
     <group name="userAdd">

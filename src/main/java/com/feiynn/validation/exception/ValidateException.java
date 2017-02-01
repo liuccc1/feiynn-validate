@@ -2,7 +2,7 @@ package com.feiynn.validation.exception;
 
 /** 
  * 
- * @author: Dean
+ * @author Dean
  */
 public class ValidateException extends RuntimeException{
 

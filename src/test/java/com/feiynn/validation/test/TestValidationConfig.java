@@ -7,17 +7,20 @@ import com.feiynn.validation.config.ValidationConfig;
 
 /** 
  * 
- * @author: Dean
+ * @author Dean
  */
 public class TestValidationConfig {
 
 	@Test
-	public void test(){
+	public void testDefault(){
 		ValidationConfig config =  ValidationConfig.getInstance();
-//		String rulesFile = "validation-rules.xml";
-//		String rulesFile = "validation-rules-noexist.xml";
-//		ValidationConfig config =  ValidationConfig.getInstance(rulesFile);
 		Assert.assertNotNull(config);
 	}
-	
+
+	@Test
+	public void testNoExistFile(){
+		String rulesFile = "validation-rules-noExist.xml"; // not exist file
+		ValidationConfig.getInstance(rulesFile);
+	}
+
 }

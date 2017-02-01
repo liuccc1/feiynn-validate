@@ -1,13 +1,13 @@
 package com.feiynn.validation.config.pojo;
 
+import com.feiynn.validation.Validator;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import com.feiynn.validation.Validator;
-
 /** 
  * 
- * @author: Dean
+ * @author Dean
  */
 public class Configuration {
 	private Map<String,Group> groups;
@@ -47,7 +47,4 @@ public class Configuration {
 	public void setValidatorsDefaultMsg(Map<String, String> validatorsDefaultMsg) {
 		this.validatorsDefaultMsg = validatorsDefaultMsg;
 	}
-	
-	
-	
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 /** 
  * 
- * @author: Dean
+ * @author Dean
  */
 public class Field {
 	private String name;
