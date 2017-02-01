@@ -2,9 +2,8 @@ package com.feiynn.validation.validators.regex;
 
 import com.feiynn.validation.validators.RegexValidator;
 
-/** 
- * 
- * @author: Dean
+/**
+ * @author Dean
  */
 public class ZipValidator extends RegexValidator {
 	protected String getRegex() {

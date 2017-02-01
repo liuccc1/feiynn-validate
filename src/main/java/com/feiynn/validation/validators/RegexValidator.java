@@ -16,8 +16,7 @@ public class RegexValidator implements Validator {
 
 	@SuppressWarnings("rawtypes")
 	@Override
-	public boolean validate(Object object, Class propertyType,
-							Object propertyValue, Rule rule) {
+	public boolean validate(Object object, Class propertyType, Object propertyValue, Rule rule) {
 		String propertyValueStr = ValidateUtils.null2String(propertyValue);
 		if (StringUtils.isBlank(propertyValueStr)) {
 			return true;

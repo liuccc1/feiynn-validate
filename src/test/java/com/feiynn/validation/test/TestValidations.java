@@ -8,16 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-/** 
- * 
+/**
  * @author Dean
  */
 public class TestValidations {
 
-	
+
 	@Test
-		public void validateMap(){
-		Map<String,Object> map = new HashMap<String,Object>();
+	public void validateMap() {
+		Map<String, Object> map = new HashMap<>();
 		map.put("username", " Dean");
 		map.put("password", "  "); //space
 		map.put("age", 1000);
@@ -27,9 +26,9 @@ public class TestValidations {
 		map.put("remark", "今天是2016年2月24日Wednesday");
 		System.out.println(Validations.INSTANCE.validate(map, "userAdd"));
 	}
-	
+
 	@Test
-	public void validateJavaBean(){
+	public void validateJavaBean() {
 		TestUser user = new TestUser();
 		user.setUsername(" Dean");
 		user.setPassword("   ");

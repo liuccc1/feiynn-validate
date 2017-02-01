@@ -83,7 +83,7 @@ public class TestValidator {
 
 	@Test
 	public void testRegex() {
-		Map<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> map = new HashMap<>();
 		map.put("test1", "aaa");
 		Map<String, String> resultMap = Validations.INSTANCE.validate(map, "testRegex");
 		System.out.println("testRegex:" + resultMap);
