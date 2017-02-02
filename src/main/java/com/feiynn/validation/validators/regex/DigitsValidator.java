@@ -7,9 +7,10 @@ import com.feiynn.validation.validators.RegexValidator;
  *
  * @author Dean
  */
-public class DigitsValidator extends RegexValidator {
+public class DigitsValidator extends RegexValidator implements RegexGetter {
 
-	protected String getRegex() {
+	@Override
+	public String getRegex() {
 		return "^(0|[1-9]\\d*)$";
 	}
 }

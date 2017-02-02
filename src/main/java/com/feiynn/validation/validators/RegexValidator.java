@@ -3,6 +3,7 @@ package com.feiynn.validation.validators;
 import com.feiynn.validation.Validator;
 import com.feiynn.validation.config.pojo.Rule;
 import com.feiynn.validation.utils.ValidateUtils;
+import com.feiynn.validation.validators.regex.RegexGetter;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Pattern;
@@ -10,7 +11,7 @@ import java.util.regex.Pattern;
 /**
  * @author Dean
  */
-public class RegexValidator implements Validator {
+public class RegexValidator implements Validator, RegexGetter {
 
 	private String regex = "";
 
@@ -31,7 +32,8 @@ public class RegexValidator implements Validator {
 		return Pattern.matches(getRegex(), propertyValueStr);
 	}
 
-	protected String getRegex() {
+	@Override
+	public String getRegex() {
 		return regex;
 	}
 

@@ -5,9 +5,10 @@ import com.feiynn.validation.validators.RegexValidator;
 /**
  * @author Dean
  */
-public class EmailValidator extends RegexValidator {
+public class EmailValidator extends RegexValidator implements RegexGetter {
 
-	protected String getRegex() {
+	@Override
+	public String getRegex() {
 		return "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
 	}
 
