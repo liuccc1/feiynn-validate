@@ -12,13 +12,9 @@ import java.util.Map;
 public class Configuration {
 	private Map<String,Group> groups;
 	
-	private Map<String,Validator> validators = new HashMap<String,Validator>();
+	private Map<String,Validator> validators = new HashMap<>();
 	
-	private Map<String,String> validatorsDefaultMsg = new HashMap<String,String>();
-	
-	public void addGroup(String name, Group group){
-		this.groups.put(name, group);
-	}
+	private Map<String,String> validatorsDefaultMsg = new HashMap<>();
 	
 	public Group getGroup(String name){
 		return this.groups.get(name);
@@ -44,7 +40,4 @@ public class Configuration {
 		return validatorsDefaultMsg;
 	}
 
-	public void setValidatorsDefaultMsg(Map<String, String> validatorsDefaultMsg) {
-		this.validatorsDefaultMsg = validatorsDefaultMsg;
-	}
 }

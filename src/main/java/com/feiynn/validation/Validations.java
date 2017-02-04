@@ -9,14 +9,15 @@ import java.util.Map;
  *
  * @author Dean
  */
-public enum Validations {
-	INSTANCE;
+public final class Validations {
+	private Validations() {
+	}
 
-	public Map<String, String> validate(Object bean, String groupName) {
+	public static Map<String, String> validate(Object bean, String groupName) {
 		return validate(bean, groupName, ValidationConfig.DEFAULT_RULES_FILE);
 	}
 
-	public Map<String, String> validate(Object bean, String groupName, String rulesFile) {
+	public static Map<String, String> validate(Object bean, String groupName, String rulesFile) {
 		return ValidationConfig.getInstance(rulesFile).buildValidateService().validate(bean, groupName);
 	}
 }

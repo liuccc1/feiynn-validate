@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 
 /**
- * * <p>You can create a ValidationConfig instance by invoking {@code getInstance()} if the default configuration
+ * <p>You can create a ValidationConfig instance by invoking {@code getInstance()} if the default configuration
  * is all you need. You can also use {@code getInstance(String)} to build a ValidationConfig instance with custom
  * configuration .</p>
  *

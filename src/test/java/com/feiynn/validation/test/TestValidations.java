@@ -2,6 +2,7 @@ package com.feiynn.validation.test;
 
 import com.feiynn.validation.Validations;
 import com.feiynn.validation.test.model.TestUser;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class TestValidations {
 		map.put("email", "myEmail@");
 		map.put("userMobile", "1898046123");
 		map.put("remark", "今天是2016年2月24日Wednesday");
-		System.out.println(Validations.INSTANCE.validate(map, "userAdd"));
+		System.out.println(Validations.validate(map, "userAdd"));
 	}
 
 	@Test
@@ -37,6 +38,13 @@ public class TestValidations {
 		user.setEmail("myEmail@");
 		user.setUserMobile("1898046123");
 		user.setRemark("今天是2016年2月24日Wednesday");
-		System.out.println(Validations.INSTANCE.validate(user, "userAdd"));
+		System.out.println(Validations.validate(user, "userAdd"));
+	}
+
+	@Test
+	public void validatePass() {
+		TestUser user = new TestUser();
+		user.setUsername("dean");
+		Assert.assertTrue(Validations.validate(user, "test2").isEmpty());
 	}
 }

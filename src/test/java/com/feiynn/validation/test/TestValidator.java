@@ -21,7 +21,7 @@ public class TestValidator {
 		map.put("test4", "1.1");
 		map.put("test5", "-1.1");
 		map.put("test6", "01");
-		Map<String, String> resultMap = Validations.INSTANCE.validate(map, "testDigits");
+		Map<String, String> resultMap = Validations.validate(map, "testDigits");
 		System.out.println("testDigits:" + resultMap);
 
 		Assert.assertNull(resultMap.get("test1"));
@@ -44,7 +44,7 @@ public class TestValidator {
 		map.put("test5", "-1.1");
 		map.put("test6", "01");
 
-		Map<String, String> resultMap = Validations.INSTANCE.validate(map, "testNumber");
+		Map<String, String> resultMap = Validations.validate(map, "testNumber");
 		System.out.println("testNumber:" + resultMap);
 
 		Assert.assertNull(resultMap.get("test1"));
@@ -65,7 +65,7 @@ public class TestValidator {
 		map.put("test4", "a");
 		map.put("test5", "a");
 		map.put("test6", "a");
-		Map<String, String> resultMap = Validations.INSTANCE.validate(map, "testMaxLength");
+		Map<String, String> resultMap = Validations.validate(map, "testMaxLength");
 		System.out.println("testMaxLength:" + resultMap);
 	}
 
@@ -77,7 +77,7 @@ public class TestValidator {
 		map.put("test3", "a");
 		map.put("test4", "a");
 		map.put("test5", "c");
-		Map<String, String> resultMap = Validations.INSTANCE.validate(map, "testMax");
+		Map<String, String> resultMap = Validations.validate(map, "testMax");
 		System.out.println("testMax:" + resultMap);
 	}
 
@@ -85,7 +85,7 @@ public class TestValidator {
 	public void testRegex() {
 		Map<String, Object> map = new HashMap<>();
 		map.put("test1", "aaa");
-		Map<String, String> resultMap = Validations.INSTANCE.validate(map, "testRegex");
+		Map<String, String> resultMap = Validations.validate(map, "testRegex");
 		System.out.println("testRegex:" + resultMap);
 		Assert.assertNotNull(resultMap.get("test1"));
 	}
